@@ -1,0 +1,76 @@
+import java.util.*; 
+class node 
+{ 
+public int data; 
+public node next; 
+public node(int x) 
+{ 
+data=x; 
+next=null; 
+} 
+} 
+class queuell 
+{ 
+node first; 
+queuell() 
+{ 
+first=null; 
+} 
+void enqueue(int n) 
+{ 
+node newnode=new node(n); 
+if(first==null) 
+first=newnode; 
+last=newnode; 
+else 
+{ 
+last.next=newnode; 
+last=newnode; 
+} 
+} 
+void dequeue() 
+{ 
+System.out.println("enqueue element is "+first.data); 
+node temp; 
+temp=first; 
+first=temp.next; 
+temp.next=null; 
+} 
+void display() 
+{ 
+node temp; 
+for(temp=first;temp!=null;temp=temp.next) 
+System.out.println("\t"+temp.data); 
+} 
+} 
+class queue 
+{ 
+public static void main(String args[]) 
+{ 
+queuell s=new queuell(); 
+int ch,n; 
+Scanner o=new Scanner( System.in); 
+try 
+{ 
+do 
+{ 
+System.out.println("Enter your choice\n1.push\n2.pop\n3.Display\n4.Exit"); 
+ch=o.nextInt(); 
+switch(ch) 
+{ 
+case 1:System.out.println("Enter a number"); 
+n=o.nextInt(); 
+s.enqueue(n); 
+break; 
+case 2:s.dequeue(); 
+break; 
+case 3:s.display(); 
+break; 
+} 
+}while(ch<4); 
+} 
+catch(Exception e) 
+{ 
+} 
+} 
+}
