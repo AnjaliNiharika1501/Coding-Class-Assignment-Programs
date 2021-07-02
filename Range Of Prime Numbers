@@ -1,0 +1,35 @@
+import java.util.Scanner;
+import java.util.*;
+public class Range
+{
+	public static void main(String args[])
+	{
+		int a, b,count = 0, i, j;
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter first number "); 
+		a = s.nextInt();
+		System.out.print("Enter last number"); 
+		b= s.nextInt();
+		System.out.println(" range");
+
+		for(i = a; i <= b; i++)
+		{
+			for( j = 2; j < i; j++)
+			{
+				if(i % j == 0)
+				{
+					count = 0;
+					break;
+				}
+				else
+				{
+					count = 1;
+				}
+			}
+			if(count == 1)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+}
