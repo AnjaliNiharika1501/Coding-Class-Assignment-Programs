@@ -1,0 +1,32 @@
+import java.util.*;
+public class Anjali {
+	public static void main(String[] args) {
+		String str;
+		int i, letter = 0, digit = 0, symbol = 0;
+		char ch;
+		Scanner sc = new Scanner(System.in);
+		sc= new Scanner(System.in);
+		System.out.print("Enter String"); 
+		str = sc.nextLine();	
+		for(i = 0; i < str.length(); i++)
+		{
+			ch = str.charAt(i);
+			if(ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z' ) {
+				letter++;
+			}
+			else if(ch >= '0' && ch <= '9') {
+				digit++;
+			}
+			else {
+				symbol++;
+			}
+		}
+		if((letter==digit) && (digit==symbol))
+		{
+			System.out.println("Yes");		
+		}
+		else {
+			System.out.println("No");
+		}
+	}
+}
