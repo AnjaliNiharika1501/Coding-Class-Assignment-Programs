@@ -44,7 +44,7 @@ public static String Compression(String s)
           sb.append(count);
         }
         s = sb.toString();
-        System.out.println("The compressed string along with the counts of repeated characters is:" + "\n" +s);
+        System.out.println("The compressed string =" + "\n" +s);
         return s;
  }
 }
