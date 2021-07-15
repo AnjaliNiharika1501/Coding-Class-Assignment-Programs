@@ -1,0 +1,16 @@
+class Solution {
+    public int[] sortArrayByParityII(int[] A) {
+        int even = 0, odd = 1;
+        while(even < A.length && odd < A.length){
+            if(A[even]%2==1){
+                int tmp = A[even];
+                A[even] = A[odd];
+                A[odd] = tmp;
+                odd += 2;
+            }else{
+                even += 2;
+            }
+        }
+        return A;
+    }
+}
