@@ -1,0 +1,19 @@
+import java.util.*;
+class Anjali
+{
+    public static void main(String args[])
+    {
+          ArrayList<String> n=new ArrayList<String>();
+        n.add("red");
+        n.add("blue");
+        n.add("yellow");
+        n.add("green");
+        System.out.println("list n:" +n);
+        ArrayList<String> n1=new ArrayList<String>();
+        n1.add("yellow");
+        n1.add("pink");
+         System.out.println("List n1:"+n1);
+         n1.addAll(n);
+         System.out.println("Array in sort order:"+n1);
+    }
+}
