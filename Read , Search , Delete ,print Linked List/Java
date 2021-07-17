@@ -1,0 +1,28 @@
+import java.util.*;
+class Anjali
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+int x;
+LinkedList<Integer> n=new LinkedList<Integer>();
+System.out.println("Enter x value");
+x=s.nextInt(); 
+for(int i=0;i<x;i++)
+{
+n.add(s.nextInt());
+}
+System.out.println("Enter value to search");
+int r=s.nextInt();
+if(n.contains(r))
+{
+System.out.println("list after deletion");
+int v=n.indexOf(r);  
+n.remove(v);
+for(Integer i:n)
+System.out.print(i+" ");
+}
+else
+System.out.println("element not found");
+}
+}
