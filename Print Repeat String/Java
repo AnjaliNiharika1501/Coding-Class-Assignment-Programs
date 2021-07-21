@@ -1,0 +1,28 @@
+import java.util.*;
+class Anjali
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+String[] str=new String[n];
+int keys[]=new int[n];
+for(int i=0;i<n;i++)
+{
+str[i]=s.next();
+}
+HashMap<String,Integer> h1=new HashMap<String,Integer>();
+for(int j=0;j<n;j++)
+{
+if(h1.containsKey(str[j]))   
+h1.put(str[j],h1.get(str[j])+1);
+else
+h1.put(str[j],1);
+}
+for(Map.Entry<String, Integer> k : h1.entrySet())
+{
+if(k.getValue()>2)
+System.out.println(k.getKey() + "=" + k.getValue());
+}
+}
+}
