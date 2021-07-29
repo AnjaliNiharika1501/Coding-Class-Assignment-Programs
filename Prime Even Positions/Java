@@ -1,0 +1,38 @@
+import java.util.*;
+class Anjali
+{
+public static void main(String args[])
+{
+System.out.println("Enter a,b Values");
+Scanner s=new Scanner(System.in);
+int a=s.nextInt();
+int b=s.nextInt();
+int prime[]=new int[b+1];
+int prime1[]=new int[b+1];
+for(int i=1;i<=b;i++)
+prime[i]=1;
+prime[1]=0;
+for(int p=2;p*p<=b;p++)
+{
+if(prime[p]==1)
+{
+for(int i=p*p;i<=b;i+=p)
+prime[i]=0;
+}
+}
+int k=0,u1=2;
+for(int j=a;j<=b;j++)
+{
+if(prime[j]==1)
+{
+prime1[k]=j;
+k++;
+}
+}
+for(int u=2;u<=b;u+=2)
+{
+if(prime1[u-1]!=0)
+System.out.print(prime1[u-1]+" ");
+}
+}
+}
