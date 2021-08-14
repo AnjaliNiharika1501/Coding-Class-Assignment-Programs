@@ -1,0 +1,31 @@
+import java.util.*;
+class Anjali
+{
+Scanner s=new Scanner(System.in);
+static int n=0;
+static int N=50;
+int i=0;
+public static void f1()
+{
+if(n<N)
+{
+n=n+5;
+System.out.print(n+" ");
+f2();
+}
+}
+public static void f2()
+{
+if(n<N)
+{
+n+=5;
+System.out.print(n+" ");
+f1();
+}
+}
+
+public static void main(String args[])
+{
+f1();
+}
+}
