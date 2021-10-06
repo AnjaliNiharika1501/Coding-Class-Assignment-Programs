@@ -1,0 +1,21 @@
+import java.util.*;
+class Anjali
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+int Q=s.nextInt();
+while(Q!=0)
+{
+int even=0;
+int n=s.nextInt();
+if(n<=100)
+{
+for(int i=1;i<n+1;i++)
+even=even+i*2; 
+System.out.println(even);
+}
+Q--;
+}
+}
+}
